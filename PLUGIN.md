@@ -2,7 +2,7 @@
 
 ## Overview
  
-Input shaping describes a set of algorithms to reduce ringing frequencies that inevitably occur due to hardware factors in 3D printers. In order to isolate what frequencies affect a machine the most, an [accelerometer](https://docs.duet3d.com/en/User_manual/Connecting_hardware/Sensors_Accelerometer) may be used. This plugin visualises the ringin frequences, allows you to see the impact of various input shapers and fine tune them
+Input shaping describes a set of algorithms to reduce ringing frequencies that inevitably occur due to hardware factors in 3D printers. In order to isolate what frequencies affect a machine the most, an [accelerometer](https://docs.duet3d.com/en/User_manual/Connecting_hardware/Sensors_Accelerometer) may be used. This plugin visualises the ringing frequences, allows you to see the impact of various input shapers and fine tune them
 
 ## Plugin installation
 
