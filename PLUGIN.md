@@ -1,8 +1,8 @@
 # Input Shaping Plugin
 
 ## Overview
-
-Input shaping describes a set of algorithms to reduce ringing frequencies that inevitably occur due to hardware factors in 3D printers. In order to isolate what frequencies affect a machine the most, an [accelerometer](https://docs.duet3d.com/en/User_manual/Connecting_hardware/Sensors_Accelerometer) may be used. Note that revision 1.1 and newer of the [Duet 3 Toolboard 1LC](https://docs.duet3d.com/Duet3D_hardware/Duet_3_family/Duet_3_Toolboard_1LC) boards also come with an embedded accelerometer.
+ 
+Input shaping describes a set of algorithms to reduce ringing frequencies that inevitably occur due to hardware factors in 3D printers. In order to isolate what frequencies affect a machine the most, an [accelerometer](https://docs.duet3d.com/en/User_manual/Connecting_hardware/Sensors_Accelerometer) may be used. This plugin visualises the ringin frequences, allows you to see the impact of various input shapers and fine tune them
 
 ## Plugin installation
 
@@ -18,5 +18,4 @@ Before you can start recording samples, you must have an accelerometer connected
 
 ## Documentation
 
-This plugin lets you fine-tune input shaping and try out different shaper types.
 Please see the [official docs](https://docs.duet3d.com/User_manual/Tuning/Input_shaping_plugin) for further information.
