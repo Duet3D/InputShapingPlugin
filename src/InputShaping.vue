@@ -193,12 +193,12 @@ th {
 <script>
 'use strict'
 
+import { InputShapingType } from '@duet3d/objectmodel'
 import Vue from 'vue'
 import { mapState, mapGetters, mapActions } from 'vuex'
 
-import Events from '@/utils/events.js'
-import Path from '@/utils/path.js'
-import { InputShapingType } from '@/store/machine/modelEnums'
+import Events from '@/utils/events'
+import Path from '@/utils/path'
 
 import RecordMotionProfileDialog from './RecordMotionProfileDialog'
 import InputShaperCheckbox from './InputShaperCheckbox'

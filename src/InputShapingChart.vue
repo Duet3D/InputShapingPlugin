@@ -10,7 +10,7 @@ import { mapState } from 'vuex'
 
 import './RangePlugin'
 import './VLinePlugin'
-import { getInputShaperDamping, getInputShaperFactors, InputShaperType } from '@duet3d/motionanalysis/dist/shapers'
+import { getInputShaperDamping, getInputShaperFactors, InputShaperType } from '@duet3d/motionanalysis'
 
 export default {
 	props: {

@@ -216,11 +216,10 @@
 <script>
 'use strict'
 
+import { Axis, KinematicsName, StatusType } from '@duet3d/objectmodel'
 import { mapActions, mapState } from 'vuex'
 
-import { Axis } from '@/store/machine/modelItems'
 import { OperationCancelledError } from '@/utils/errors'
-import { KinematicsName, StatusType } from "@/store/machine/modelEnums";
 
 const MoveState = {
 	idle: 'idle',
