@@ -216,7 +216,7 @@
 <script>
 'use strict'
 
-import { Axis, KinematicsName, StatusType } from '@duet3d/objectmodel'
+import { Axis, KinematicsName, MachineStatus } from '@duet3d/objectmodel'
 import { mapActions, mapState } from 'vuex'
 
 import { OperationCancelledError } from '@/utils/errors'
@@ -637,7 +637,7 @@ export default {
 			}
 		},
 		'state.status'(to) {
-			if ((to === StatusType.disconnected || to === StatusType.off) && this.currentPage === 'collection') {
+			if ((to === MachineStatus.disconnected || to === MachineStatus.off) && this.currentPage === 'collection') {
 				this.cancelled = true;
 			}
 		}
