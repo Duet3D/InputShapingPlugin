@@ -218,9 +218,9 @@
 
 import { mapActions, mapState } from 'vuex'
 
+import { KinematicsName, StatusType } from "@/store/machine/modelEnums";
 import { Axis } from '@/store/machine/modelItems'
 import { OperationCancelledError } from '@/utils/errors'
-import { KinematicsName, StatusType } from "@/store/machine/modelEnums";
 
 const MoveState = {
 	idle: 'idle',

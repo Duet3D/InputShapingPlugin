@@ -10,7 +10,8 @@ import { mapState } from 'vuex'
 
 import './RangePlugin'
 import './VLinePlugin'
-import { getInputShaperDamping, getInputShaperFactors, InputShaperType } from '@duet3d/motionanalysis/dist/shapers'
+import { getInputShaperDamping, getInputShaperFactors } from '@duet3d/motionanalysis/dist/shapers'
+import { InputShapingType } from '@/store/machine/modelEnums'
 
 export default {
 	props: {
@@ -280,7 +281,7 @@ export default {
 				for (let shaperType of this.inputShapers) {
 					if (shaperType === 'none' || shaperType === 'custom') {
 						continue;
-					} else if (!(shaperType in InputShaperType)) {
+					} else if (!(shaperType in InputShapingType)) {
 						console.warn(`Unsupported shaper type ${shaperType}`);
 						continue;
 					}
