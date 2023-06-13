@@ -6,12 +6,12 @@
 'use strict'
 
 import Chart from 'chart.js'
+import { InputShapingType } from '@duet3d/objectmodel'
 import { mapState } from 'vuex'
 
 import './RangePlugin'
 import './VLinePlugin'
 import { getInputShaperDamping, getInputShaperFactors } from '@duet3d/motionanalysis/dist/shapers'
-import { InputShapingType } from '@/store/machine/modelEnums'
 
 export default {
 	props: {
