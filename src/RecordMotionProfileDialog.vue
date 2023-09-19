@@ -125,6 +125,7 @@
 								</div>
 							</div>
 							<v-checkbox class="my-2" v-model="recordWholeMove" label="Capture data during the whole length of the move" :ripple="false" hide-details/>
+							<v-checkbox class="my-2" v-model="disableMesh" label="Disable Mesh Bedleveling (Could cause artifacts)" :ripple="false" hide-details/>
 
 							The machine will record a new Motion Profile as soon as Next is clicked.
 						</div>
@@ -333,6 +334,7 @@ export default {
 			yAxisCenter: 0,
 			zAxisCenter: 0,
 			recordWholeMove: true,
+			disableMesh: false,
 			run: 0,
 			finished: false,
 			cancelled: false
@@ -529,7 +531,7 @@ export default {
 					throw new OperationCancelledError();
 				}
 
-				// Go to the start position
+				// Go to the start position and may disable mesh leveling
 				const moveAxes = move.axis.split('+');
 				let startMoveParameters = moveAxes.map(axis => `${axis}${move.start}`).reduce((a, b) => a + ' ' + b);
 				if (this.centerAxes) {
@@ -545,6 +547,9 @@ export default {
 				}
 				await this.doCode(`G1 ${startMoveParameters} F${this.maxSpeed}`);
 				await this.doCode('G4 S1');
+				if (this.disableMesh) {
+					await this.doCode(`G29 S2`);
+				}
 				if (this.cancelled) {
 					move.state = MoveState.cancelled;
 					throw new OperationCancelledError();
